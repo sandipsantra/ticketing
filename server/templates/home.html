@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<form action=" " method="POST" enctype="multipart/form-data">
+<h3>Enter the Subject</h3>
+<textarea name="subject" rows="4" cols="50"></textarea>
+<br>
+<h3>Enter the Description</h3>
+<textarea name="text" rows="4" cols="50"></textarea>
+<br>
+<input type="submit">
+</form>
+{% if result is not none %}
+{% for key in result %}
+<h3>{{ key }}:&nbsp;&nbsp;{{result[key]}}</h3>
+{% endfor %}
+{% endif %}
+</center>
+</body>
+</html>
